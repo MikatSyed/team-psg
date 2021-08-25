@@ -9,17 +9,12 @@ const Player = () => {
     const[cart,setCart] = useState([]);
     // console.log(cart);
     
-    const handleAddPlayer= (player,setClick,isAdd) =>{
+    const handleAddPlayer= (player) =>{
 
           console.log("Add button clcicked",player);     
           const newCart = [...cart,player];
           setCart(newCart);
-          if(isAdd ){
-              setClick(false);
-          }
-          else {
-              setClick(true);
-          }
+         
     }
     const handleDeletePlayer = (playerId)=>{
         console.log("Delete Clicked",playerId);

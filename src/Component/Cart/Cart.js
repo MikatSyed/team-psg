@@ -6,6 +6,15 @@ const Cart = (props) => {
     let [click, setClick] = useState(true)
     // console.log(props);
     const { name, img, salary, birth, id  } = props.player;
+
+    const handleAdd = ()=>{
+        props.handleAddPlayer(props.player)
+        setClick(false)
+    }
+    const handleDelete = ()=>{
+        props.handleDeletePlayer(id)
+        setClick(true)
+    }
     return (
         <div class="col-md-4 ">
             <div class="col">
@@ -17,11 +26,11 @@ const Cart = (props) => {
                         <h6 class="card-text text-secondary"><FontAwesomeIcon icon={faBirthdayCake} />{birth}</h6>
                        
                        {
-                           click ? <button class="btn btn-primary" onClick={() => props.handleAddPlayer(props.player,setClick,true)} >Add</button>
+                           click ?<div class="d-flex justify-content-center"> <button class="btn btn-primary" onClick={handleAdd} >Add</button> </div>    
                            :
-                           <button class="btn btn-danger ml-2" onClick={() => props.handleDeletePlayer(id,setClick,false)}>Remove</button>
+                          <div class="d-flex justify-content-center"> <button class="btn btn-danger " onClick={handleDelete}>Remove</button></div>
                        }
-                                
+                        
                                 
                            
                         
