@@ -1,0 +1,17 @@
+.cart-info img{
+    width: 120px;
+ 
+}
+hr{
+    height:2px;
+    border-width:0;
+    color:gray;
+    background-color:yellow;
+    margin-right: 10px;
+}
+h5{
+    color:white;
+}
+h6{
+    color:white;
+}

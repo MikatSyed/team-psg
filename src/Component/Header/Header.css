@@ -1,0 +1,14 @@
+
+.nav-text{
+    color:yellow;
+}
+nav ul li a{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+    padding: 5px
+}
+.nav-bg{
+    background-color:rgb(18, 18, 54);
+}
